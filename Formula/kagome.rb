@@ -2,29 +2,27 @@
 class Kagome < Formula
   desc "Self-contained Japanese Morphological Analyzer written in pure Go."
   homepage "https://github.com/ikawaha/kagome"
-  version "2.3.1"
+  version "2.3.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/ikawaha/kagome/releases/download/v2.3.1/kagome_2.3.1_darwin_amd64.tar.gz"
-    sha256 "4785e48eed1d5f5f039dad4e698d0d15eb89f4cd820cbf6b2f93a84c69b20744"
+    url "https://github.com/ikawaha/kagome/releases/download/v2.3.2/kagome_2.3.2_darwin_amd64.tar.gz"
+    sha256 "88f62beab3e2e8bb3cf5f18820af9b296bf703ab53789dbb7ff75d1dc65828f7"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/ikawaha/kagome/releases/download/v2.3.1/kagome_2.3.1_linux_amd64.tar.gz"
-      sha256 "0f3ab4262f04b69ba9c0ce52c5a1e05281b3d318955accd1b3be2de2f547e447"
+      url "https://github.com/ikawaha/kagome/releases/download/v2.3.2/kagome_2.3.2_linux_amd64.tar.gz"
+      sha256 "f83922894612d98a69aef3b0a6e039de2aa9fba73d2eb5d612112029c2bf393a"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ikawaha/kagome/releases/download/v2.3.1/kagome_2.3.1_linux_arm64.tar.gz"
-        sha256 "40ff276195244c87f16f590feeb67079d0fb9039f722a1adc0cea7b1cc403f4f"
+        url "https://github.com/ikawaha/kagome/releases/download/v2.3.2/kagome_2.3.2_linux_arm64.tar.gz"
+        sha256 "0931d84a8a48cbb833ce0e3882daa4bba9d7659fbcb8836a4f90198aea3e42b2"
       else
-        url "https://github.com/ikawaha/kagome/releases/download/v2.3.1/kagome_2.3.1_linux_armv6.tar.gz"
-        sha256 "3368bbf63bdda8a4308bdb34c1a7fa7b9a6cbb6f10a68a27a39ae6fe5736ec67"
+        url "https://github.com/ikawaha/kagome/releases/download/v2.3.2/kagome_2.3.2_linux_armv6.tar.gz"
+        sha256 "6f0bfc930ba8e0820c121064c716b67334b8a03dbe3086b4d6ef724f336bddb9"
       end
     end
   end
-  
-  depends_on "go"
 
   def install
     bin.install "kagome"
