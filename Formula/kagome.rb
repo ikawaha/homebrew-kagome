@@ -5,24 +5,29 @@
 class Kagome < Formula
   desc "Self-contained Japanese Morphological Analyzer written in pure Go."
   homepage "https://github.com/ikawaha/kagome"
-  version "2.4.6"
+  version "2.5.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/ikawaha/kagome/releases/download/v2.4.6/kagome_2.4.6_darwin_amd64.tar.gz"
-    sha256 "95d1d184125be9cc59bb93da91750a9bc2620fd6b85b45ed0a91afe67f327689"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/ikawaha/kagome/releases/download/v2.5.0/kagome_2.5.0_darwin_amd64.tar.gz"
+      sha256 "bd62bf132d8221ea3d7f2d99b8659a2055ffb9ee9770d6f439763fbce440c417"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/ikawaha/kagome/releases/download/v2.4.6/kagome_2.4.6_linux_amd64.tar.gz"
-    sha256 "64c670a2b24027a9ee4efd3dbae19caebc913c0a6f717e9859ab151a3f037746"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/ikawaha/kagome/releases/download/v2.4.6/kagome_2.4.6_linux_armv6.tar.gz"
-    sha256 "a5dd65580c67027a874f7ee5dc11f34751ddbff88f1c0310de6b65307d90b934"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/ikawaha/kagome/releases/download/v2.4.6/kagome_2.4.6_linux_arm64.tar.gz"
-    sha256 "dc3166396e678a98e607c821cab5ecc0dd53c451cadc497b20b61ada3fe2593e"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/ikawaha/kagome/releases/download/v2.5.0/kagome_2.5.0_linux_amd64.tar.gz"
+      sha256 "5f1ea58fd179722c031994086fdc20c4d5ac137b0de307af99a45a2f1d371487"
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/ikawaha/kagome/releases/download/v2.5.0/kagome_2.5.0_linux_armv6.tar.gz"
+      sha256 "065d3ae95294b3f8b81dcd08b556360a3d840ad491ddab8e2ab0b8f657d62dd3"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ikawaha/kagome/releases/download/v2.5.0/kagome_2.5.0_linux_arm64.tar.gz"
+      sha256 "cbe5c07fc148ecfd191b1d8d011f862a078149d251aec6d839f5213b7e3320b9"
+    end
   end
 
   def install
