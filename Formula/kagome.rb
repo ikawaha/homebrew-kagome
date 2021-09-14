@@ -5,32 +5,32 @@
 class Kagome < Formula
   desc "Self-contained Japanese Morphological Analyzer written in pure Go."
   homepage "https://github.com/ikawaha/kagome"
-  version "2.6.5"
+  version "2.7.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ikawaha/kagome/releases/download/v2.6.5/kagome_2.6.5_darwin_amd64.tar.gz"
-      sha256 "1bcfc7f41c254da437ffb5daef97ebf41b3793fa81f2f0d208e9c86719a582b5"
+      url "https://github.com/ikawaha/kagome/releases/download/v2.7.0/kagome_2.7.0_darwin_amd64.tar.gz"
+      sha256 "703fdbd90691c1d1c43339b711a43d60a91ee6922fc5bec62c69694791b908b2"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ikawaha/kagome/releases/download/v2.6.5/kagome_2.6.5_darwin_arm64.tar.gz"
-      sha256 "fefa68aed600e1c44c5899403bd04d0088b351977c789d4a37cd69bcdc82569d"
+      url "https://github.com/ikawaha/kagome/releases/download/v2.7.0/kagome_2.7.0_darwin_arm64.tar.gz"
+      sha256 "8268027b02665bb7254224657269414de2f10328b29fb1bc5b99e40e294ba97c"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/ikawaha/kagome/releases/download/v2.6.5/kagome_2.6.5_linux_amd64.tar.gz"
-      sha256 "89e111a3b6e904fba57ec72ef0304ea7354cd2cff5545023237a17296e84b0d5"
+      url "https://github.com/ikawaha/kagome/releases/download/v2.7.0/kagome_2.7.0_linux_amd64.tar.gz"
+      sha256 "7b3a7a498f620d7ea9b24bb79a195e855cef54dd1a9697d1aa9b73ffa994ec79"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/ikawaha/kagome/releases/download/v2.6.5/kagome_2.6.5_linux_armv6.tar.gz"
-      sha256 "e4d7f802261fa6c3407aaa3e561e6d7a561ece987a904b5bf56765dcac59b9e4"
+      url "https://github.com/ikawaha/kagome/releases/download/v2.7.0/kagome_2.7.0_linux_armv6.tar.gz"
+      sha256 "4ed75ee19833da2038934261cdb049f5f8eede48b91ebc740a1b4dc13bbc1e2c"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ikawaha/kagome/releases/download/v2.6.5/kagome_2.6.5_linux_arm64.tar.gz"
-      sha256 "204867d4f7928734186039608ff4e9021df89a38db839922dd583e37cd39c184"
+      url "https://github.com/ikawaha/kagome/releases/download/v2.7.0/kagome_2.7.0_linux_arm64.tar.gz"
+      sha256 "a8b88614d28113a966abcb48958f9cb03c72549512381b5b461b57578b444f0c"
     end
   end
 
