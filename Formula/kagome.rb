@@ -5,11 +5,11 @@
 class Kagome < Formula
   desc "Self-contained Japanese Morphological Analyzer written in pure Go."
   homepage "https://github.com/ikawaha/kagome"
-  version "2.9.4"
+  version "2.9.5"
 
   on_macos do
-    url "https://github.com/ikawaha/kagome/releases/download/v2.9.4/kagome_2.9.4_darwin_all.tar.gz"
-    sha256 "6f5b142d3aa669889b1395b9dacfcaf5f8b876c917f2ef2d0ba6f1d3e465a2eb"
+    url "https://github.com/ikawaha/kagome/releases/download/v2.9.5/kagome_2.9.5_darwin_all.tar.gz"
+    sha256 "e94e94a95bfc816b507194978b4907dfc53a1034e9284ff2f530067e2581ba12"
 
     def install
       bin.install "kagome"
@@ -18,24 +18,24 @@ class Kagome < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/ikawaha/kagome/releases/download/v2.9.4/kagome_2.9.4_linux_armv6.tar.gz"
-      sha256 "538603e90539d856fdeeb0988c080179ee1b260e57b415c7f5d1823e21bf3105"
+      url "https://github.com/ikawaha/kagome/releases/download/v2.9.5/kagome_2.9.5_linux_armv6.tar.gz"
+      sha256 "9e06ca667b605fa6e2ce8588d2d028137654cd6114958b7ceb88506d4f5570e7"
 
       def install
         bin.install "kagome"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ikawaha/kagome/releases/download/v2.9.4/kagome_2.9.4_linux_arm64.tar.gz"
-      sha256 "f6b2156eb71f9635fd4c791a5eb01c6d1893394f79284a97aacd4511eca6633f"
+      url "https://github.com/ikawaha/kagome/releases/download/v2.9.5/kagome_2.9.5_linux_arm64.tar.gz"
+      sha256 "68e99d99c776e2f4856ff52439433d89931196ab695fc4c0e311dbf9bcf165a4"
 
       def install
         bin.install "kagome"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ikawaha/kagome/releases/download/v2.9.4/kagome_2.9.4_linux_amd64.tar.gz"
-      sha256 "775123da8b0f53d2b4e61c9fa388dbdc96c47f0e9c87bc7a793fdd589baffec9"
+      url "https://github.com/ikawaha/kagome/releases/download/v2.9.5/kagome_2.9.5_linux_amd64.tar.gz"
+      sha256 "624bb7a9779691663d51952709283b744f46ef5bb7d4a6aca01c42172d37d96a"
 
       def install
         bin.install "kagome"
