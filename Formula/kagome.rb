@@ -9,7 +9,7 @@ class Kagome < Formula
 
   on_macos do
     url "https://github.com/ikawaha/kagome/releases/download/v2.9.6-alpha/kagome_2.9.6-alpha_darwin_all.tar.gz"
-    sha256 "1f448100852db9ec184491b9a513a2129eacf5ce4312693dbeffdd56f6fb8021"
+    sha256 "223104d37bc213bf22bd4d03bfd305d5d45240e399103afb63964afb06eee607"
 
     def install
       bin.install "kagome"
@@ -19,7 +19,7 @@ class Kagome < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/ikawaha/kagome/releases/download/v2.9.6-alpha/kagome_2.9.6-alpha_linux_amd64.tar.gz"
-      sha256 "a75d905171bf9cb4fba643ff946d75677ade462300a77f5d800152ec09c0bacb"
+      sha256 "dbb83c10e34f5977890ff5c2a4e50393f06b9824ff2f61be98eac96ab750a985"
 
       def install
         bin.install "kagome"
@@ -27,7 +27,7 @@ class Kagome < Formula
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/ikawaha/kagome/releases/download/v2.9.6-alpha/kagome_2.9.6-alpha_linux_armv6.tar.gz"
-      sha256 "ef5202dc270393f693cab3752f9d9eb661bf73955370c2975ade2fa0dbe34277"
+      sha256 "b121d6c1f6185e3d8f2ef32632259b776ae317a3a1d7786b7201680331075e6d"
 
       def install
         bin.install "kagome"
@@ -35,7 +35,7 @@ class Kagome < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ikawaha/kagome/releases/download/v2.9.6-alpha/kagome_2.9.6-alpha_linux_arm64.tar.gz"
-      sha256 "b7ac3cd7c3e256ece73db03dc16047a9e6b41b2440f14e597b4e7dc49b54478e"
+      sha256 "0c038419be488319ed525045cf5107c1f9315bfe03193cc2fdc29cf7e1a457f9"
 
       def install
         bin.install "kagome"
