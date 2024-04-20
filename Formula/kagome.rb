@@ -5,11 +5,11 @@
 class Kagome < Formula
   desc "Self-contained Japanese Morphological Analyzer written in pure Go."
   homepage "https://github.com/ikawaha/kagome"
-  version "2.9.6-alpha"
+  version "2.9.7"
 
   on_macos do
-    url "https://github.com/ikawaha/kagome/releases/download/v2.9.6-alpha/kagome_2.9.6-alpha_darwin_all.tar.gz"
-    sha256 "9fc24e717ecd71457ec6e3b235cd9f31d6afa4227dd129731a1d0bbfcaa10903"
+    url "https://github.com/ikawaha/kagome/releases/download/v2.9.7/kagome_2.9.7_darwin_all.tar.gz"
+    sha256 "f34bc31b3226b48aab93548b87de45dbddce9c1cbc5aea2f365b028e21642fa9"
 
     def install
       bin.install "kagome"
@@ -18,24 +18,24 @@ class Kagome < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/ikawaha/kagome/releases/download/v2.9.6-alpha/kagome_2.9.6-alpha_linux_amd64.tar.gz"
-      sha256 "7a27e485f58c4c8f9d6d1fcd8cc59ce7733079f24f0c6440068ed9ed1ffde0d0"
+      url "https://github.com/ikawaha/kagome/releases/download/v2.9.7/kagome_2.9.7_linux_amd64.tar.gz"
+      sha256 "d0a92ce677cffdd4d1a994e15f2ca81fe6be195ab07bb22877d01690b6dfd338"
 
       def install
         bin.install "kagome"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/ikawaha/kagome/releases/download/v2.9.6-alpha/kagome_2.9.6-alpha_linux_armv6.tar.gz"
-      sha256 "675e63f0553c11d8037787cb605424170f93e7a81f96c821f436a6c32ad9462b"
+      url "https://github.com/ikawaha/kagome/releases/download/v2.9.7/kagome_2.9.7_linux_armv6.tar.gz"
+      sha256 "d265c6b969443674f94dd54c06fb47b8d6f40baa5367aff9786a5222bb9192e3"
 
       def install
         bin.install "kagome"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ikawaha/kagome/releases/download/v2.9.6-alpha/kagome_2.9.6-alpha_linux_arm64.tar.gz"
-      sha256 "143454fd3aca4c215367e9e86b1282c39cb4ed0da4cb4cfb007104ee3269b32c"
+      url "https://github.com/ikawaha/kagome/releases/download/v2.9.7/kagome_2.9.7_linux_arm64.tar.gz"
+      sha256 "bb8fa856011c594bc68d2635419f3170f4237099c0e4bb4c196427f8106d34f9"
 
       def install
         bin.install "kagome"
