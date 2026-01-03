@@ -5,11 +5,11 @@
 class Kagome < Formula
   desc "Self-contained Japanese Morphological Analyzer written in pure Go."
   homepage "https://github.com/ikawaha/kagome"
-  version "2.10.2"
+  version "2.10.3"
 
   on_macos do
-    url "https://github.com/ikawaha/kagome/releases/download/v2.10.2/kagome_2.10.2_darwin_all.tar.gz"
-    sha256 "dba22aaae0c4bd479865465c7ad18a63098e738c874a8bbd55b8f4d98b295b5e"
+    url "https://github.com/ikawaha/kagome/releases/download/v2.10.3/kagome_2.10.3_darwin_all.tar.gz"
+    sha256 "0b73ad42f2d6ca0fb6bcae461814914389c21dcaabef54f0b2227ac3e004dc8d"
 
     def install
       bin.install "kagome"
@@ -17,34 +17,25 @@ class Kagome < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/ikawaha/kagome/releases/download/v2.10.2/kagome_2.10.2_linux_amd64.tar.gz"
-        sha256 "5b09b21a3620677576b22147b7fec497aca2758abe7161e42ec09402d1cda4d6"
-
-        def install
-          bin.install "kagome"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ikawaha/kagome/releases/download/v2.10.3/kagome_2.10.3_linux_amd64.tar.gz"
+      sha256 "6fe5d62f25ff569a11c664b8b200e7b21824084bcebd846022b2ade04b95fa34"
+      def install
+        bin.install "kagome"
       end
     end
-    if Hardware::CPU.arm?
-      if !Hardware::CPU.is_64_bit?
-        url "https://github.com/ikawaha/kagome/releases/download/v2.10.2/kagome_2.10.2_linux_armv6.tar.gz"
-        sha256 "d1aeb40a98f33b9cef813ebea0fbb4ab4bd819a9771011cbf95e51bedb7405cc"
-
-        def install
-          bin.install "kagome"
-        end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/ikawaha/kagome/releases/download/v2.10.3/kagome_2.10.3_linux_armv6.tar.gz"
+      sha256 "e2bdbebef7864bcb7a88ca9a1de0ff79800f8ab2e98bdbeb2b9002b42e3f343d"
+      def install
+        bin.install "kagome"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/ikawaha/kagome/releases/download/v2.10.2/kagome_2.10.2_linux_arm64.tar.gz"
-        sha256 "be06af80034dddbbbffb945220aa97e9c89f1bf4c1f49bc6c4f1017f72dbefcb"
-
-        def install
-          bin.install "kagome"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ikawaha/kagome/releases/download/v2.10.3/kagome_2.10.3_linux_arm64.tar.gz"
+      sha256 "f186b3b82c6e1f45b18a66d93d3e44dbdde9015ba402b85e5f7561326b4a58fd"
+      def install
+        bin.install "kagome"
       end
     end
   end
